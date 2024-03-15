@@ -4,13 +4,19 @@ import { CustomerComponent } from './components/CustomerComponent/customer/custo
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { HeaderComponentComponent } from './components/header-component/header-component.component';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CustomerComponent,RouterLink,FormsModule,CommonModule],
+  imports: [RouterOutlet,CustomerComponent,RouterLink,FormsModule,CommonModule,HeaderComponentComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'gas-booking-project';
+  constructor(){
+    var customerid=localStorage.getItem("customerId");
+  }
+  
+  
 }

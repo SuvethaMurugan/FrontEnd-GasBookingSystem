@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { LoginCustomer } from '../../../model/CustomerModel/LoginCustomer';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { DOCUMENT } from '@angular/common';
 import { CustomerService } from '../../../service/CustomerService/customer.service';
+import { Customer } from '../../../model/CustomerModel/Customer';
+
+
 @Component({
   selector: 'app-login-component',
   standalone: true,
@@ -13,22 +17,35 @@ import { CustomerService } from '../../../service/CustomerService/customer.servi
   styleUrl: './login-component.component.css'
 })
 export class LoginComponentComponent {
+  message:string="";
+  errormessage:string="";
+  account:Customer=new Customer();
   logincustomer:LoginCustomer=new LoginCustomer();
-  constructor(private customerservice:CustomerService){}
+  accountid?:number;
+  accountname?:string;
+  constructor(private customerservice:CustomerService,private router:Router,@Inject(DOCUMENT) private document: Document){}
   loginComponent(){
     this.customerservice.loginCustomer(this.logincustomer).subscribe(
       {
         next:(data)=>{
+          this.account=data;
+          this.accountid=this.account.id;
+          this.accountname=this.account.userName; 
+          localStorage.setItem("customerId",JSON.stringify(this.accountid));
+          localStorage.setItem("customerName",JSON.stringify(this.accountname));
           console.log(data);
+          this.router.navigateByUrl('customer/home');  
         },
         error:(err)=>{
-          console.log(err);
+          this.errormessage=err.error;
+          console.log(this.errormessage);
+          this.router.navigateByUrl('login');
         },
         complete:()=>{
           console.log("Completed successfully");
         }
-
       }
     )
   }
+  
 }

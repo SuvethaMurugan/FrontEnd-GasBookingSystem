@@ -1,0 +1,23 @@
+<div class="container">
+    <h3>DISPLAY ALL PRODUCTS </h3>
+    <h6 *ngIf="cylinders.length < 1">No products to display</h6>
+    <table  class="table table-bordered" *ngIf="cylinders.length > 0">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>TYPE</th>
+        <th>WEIGHT</th>
+        <th>PRICE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cylinder of cylinders">
+        <td>{{cylinder.cylinderId}}</td>
+        <td>{{cylinder.type}}</td>
+        <td>{{cylinder.weight}}</td>
+        <td>{{cylinder.price}}</td>
+        <td><button class="button button-danger" (click)="bookCylinder(cylinder.cylinderId)">book</button></td>
+      </tr>
+    </tbody>
+    </table>
+</div> 

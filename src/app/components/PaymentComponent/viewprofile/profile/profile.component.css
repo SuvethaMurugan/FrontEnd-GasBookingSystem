@@ -1,0 +1,18 @@
+.center-div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width:50%;
+    transform: translate(-50%, -50%);
+
+}
+h2{
+    position: absolute;
+    top:15%;
+    left: 50%;
+   transform: translate(-50%, -50%);
+    background-color:#C68484;
+}
+.center-div h3{
+    padding-left: 50px;
+}

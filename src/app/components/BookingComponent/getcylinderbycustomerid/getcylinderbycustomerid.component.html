@@ -1,0 +1,34 @@
+<div class="container">
+    <h3>DISPLAY ALL PRODUCTS </h3>
+    <h6 *ngIf="getcylinderbycustomerid.length < 1">No products to display</h6>
+    <table  class="table table-bordered" *ngIf="getcylinderbycustomerid.length > 0">
+      <thead>
+      <tr>
+        <th>CYLINDER ID</th>
+        <th>BOOKING ID</th>
+        <th>STATUS</th>
+        <th>CYLINDER TYPE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cylinder1 of getcylinderbycustomerid">
+        <td>{{cylinder1.id}}</td>
+        <td>{{cylinder1.cylinderid}}</td>
+        <td>{{cylinder1.status}}</td>
+        <td>{{cylinder1.cylinderType}}</td>
+        <td><button class="button button-danger" (click)="PaymentCylinder(cylinder1.id)">Pay</button></td>
+    </tbody>
+    </table>
+</div> 
+<div *ngIf="errormessage1.length<0" class="alert alert-danger">
+  <p> {{errormessage1}}</p>
+</div>
+
+<div *ngIf="ispassword">
+  Password:
+  <input type="text"  id="city" name="city" [(ngModel)]="password">
+  <button type="submit" class="btn btn-primary mb-2" (click)="getPasswordCheck()">Submit</button>
+</div>
+<router-outlet></router-outlet>
+
+

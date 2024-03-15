@@ -14,8 +14,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './customer.component.css'
 })
 export class CustomerComponent {
-
-  registercustomer:RegisterCustomer=new RegisterCustomer();
+  title = 'FrontEnd-GasBookingSystem';
+  registercustomer: any;
+  //registercustomer:RegisterCustomer=new RegisterCustomer();
   address:Address= new Address();
 
   constructor(private customerservice:CustomerService){}
@@ -37,3 +38,5 @@ export class CustomerComponent {
     )
   }
 }
+
+

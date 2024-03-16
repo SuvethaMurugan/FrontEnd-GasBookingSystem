@@ -3,16 +3,14 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { GetcylinderbycustomeridModule } from '../../../model/BookingModel/getcylinderbycustomerid/getcylinderbycustomerid.module';
 import { CylindersService } from '../../../service/CylinderService/cylinders.service';
-import { AddPaymentComponent } from '../../PaymentComponent/add-payment/add-payment.component';
 import { AddPaymentModule } from '../../../model/PaymentModel/add-payment/add-payment.module';
-import { AddPaymentService } from '../../../service/PaymentService/add-payment.service';
 import { Router } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 @Component({
   selector: 'app-getcylinderbycustomerid',
   standalone: true,
-  imports: [FormsModule,CommonModule,AddPaymentComponent,RouterLink,RouterOutlet],
+  imports: [FormsModule,CommonModule,RouterLink,RouterOutlet],
   templateUrl: './getcylinderbycustomerid.component.html',
   styleUrl: './getcylinderbycustomerid.component.css'
 })

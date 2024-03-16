@@ -15,7 +15,7 @@ import { RouterLink } from '@angular/router';
 })
 export class CustomerComponent {
 
-  registercustomer:RegisterCustomer=new RegisterCustomer();
+  registercustomer: RegisterCustomer = new RegisterCustomer;
   address:Address= new Address();
 
   constructor(private customerservice:CustomerService){}

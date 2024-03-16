@@ -1,4 +1,43 @@
-<h1>WELCOME {{customer.userName}} !</h1>
+
+    <div class="customer-info">
+        <div class="customer-details">
+            <div class="customer-label">Name:  {{customer.id}} </div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">Email: {{customer.email}} </div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">Username: {{customer.userName}} </div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">Phone:  {{customer.mobileNo}}</div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">Door No: {{customer.address?.doorNo}}</div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">Street:{{customer.address?.streetName}}</div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">City: {{customer.address?.City}}</div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">Pincode: {{customer.address?.pinCode}} </div>
+        </div><br>
+        <div class="customer-details">
+            <div class="customer-label">Delivery address: {{customer.address?.doorNo}}{{","}}{{customer.address?.streetName}}{{","}}{{customer.address?.City}}{{","}}{{customer.address?.pinCode}} </div>
+        </div><br>
+    </div>
+
+
+
+
+
+
+
+
+
+<!-- <h1>WELCOME {{customer.userName}} !</h1>
 <h2>VIEW PROFILE</h2>
 <div class="center-div">
     <h3>ID :{{customer.id}}</h3>
@@ -10,6 +49,6 @@
     <h3>MOBILE NO :{{customer.mobileNo}}</h3>
     <br>
     <h3>ADDRESS :{{customer.address?.doorNo}}{{" "}}{{customer.address?.streetName}}{{" "}}{{customer.address?.City}}{{customer.address?.pinCode}}</h3>
-</div> 
+</div>  -->
 
 

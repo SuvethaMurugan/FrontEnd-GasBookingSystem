@@ -14,14 +14,10 @@ import { RouterLink } from '@angular/router';
   styleUrl: './customer.component.css'
 })
 export class CustomerComponent {
-<<<<<<< HEAD
-  title = 'FrontEnd-GasBookingSystem';
-  registercustomer: any;
-  //registercustomer:RegisterCustomer=new RegisterCustomer();
-=======
 
-  registercustomer: RegisterCustomer = new RegisterCustomer;
->>>>>>> 7bf9a377b10fe2da69544c0445fd350f8dd3e22f
+  title = 'FrontEnd-GasBookingSystem';
+  registercustomer: RegisterCustomer = new RegisterCustomer();
+
   address:Address= new Address();
 
   constructor(private customerservice:CustomerService,private router:Router){}

@@ -14,6 +14,11 @@ import { LoginEmailComponent } from './components/login-email/login-email.compon
 import { AdminFunctionsComponent } from './components/admin-functions/admin-functions.component';
 import { TransactionComponent } from './components/PaymentComponent/transaction/transaction.component';
 
+import { CylinderFunctionsComponent } from './components/cylinder-functions/cylinder-functions.component';
+import { CustomerdetailsComponent } from './components/customerdetails/customerdetails.component';
+import { CustomerlistComponent } from './components/customerlist/customerlist.component';
+import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
+import { DeliverylistComponent } from './components/deliverylist/deliverylist.component';
 export const routes: Routes = [
     {path:'register',component:CustomerComponent},
     {path:'login',component:LoginComponentComponent},
@@ -27,7 +32,12 @@ export const routes: Routes = [
     {path:'loginUsingId',component:LoginIdComponent},
     {path:'loginUsingEmailId',component:LoginEmailComponent},
     {path:'adminFunctions',component:AdminFunctionsComponent},
-    {path:'',component:HomeComponent}
+    {path:'customerdetails',component:CustomerdetailsComponent},
+    {path:'cylinderFunctions',component:CylinderFunctionsComponent},
+    {path:'customerlist',component:CustomerlistComponent},
+    {path:'bookinghistory',component:BookingHistoryComponent},
+    {path:'deliverylist',component:DeliverylistComponent},
+    {path:'',component:HomeComponent},
     {path:'transaction',component:TransactionComponent}
 
 ];

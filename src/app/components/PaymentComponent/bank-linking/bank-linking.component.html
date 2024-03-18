@@ -1,4 +1,32 @@
-<div>
+<!DOCTYPE html>
+<body>
+    <div class="container">
+        <form>
+            <label for="usrname">BANK ID</label>
+            <input type="text" id="usrname" name="usrname" [(ngModel)]="banklinking.bankId">
+
+            <label for="psw">PASSWORD</label>
+            <input type="password" id="psw" name="psw" [(ngModel)]="banklinking.password">
+
+            <button type="submit" class="buttonclass" (click)="BankLinkingComponent()">Submit</button>
+        </form>
+    </div>
+</body>
+
+
+<!-- <form class="container">
+    <div class="form-group">
+      <label for="exampleInputEmail1">Email address</label>
+      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form> -->
+  <!-- <div>
     <form>
         <div class="form-group row">
         <label class="col-sm-2 col-form-label" >Bank ID</label>
@@ -17,5 +45,5 @@
     <button type="submit" class="btn btn-primary mb-2" (click)="BankLinkingComponent()">Submit</button>
 </form>
        
-</div>    
+</div>     -->
   

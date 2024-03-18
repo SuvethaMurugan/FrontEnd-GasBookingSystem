@@ -16,3 +16,17 @@ h2{
 .center-div h3{
     padding-left: 50px;
 }
+
+  .customer-info {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    margin-top: 3%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-left: 18%;
+    padding-top: 2%;
+    font-size:17px;
+}
+
+
+

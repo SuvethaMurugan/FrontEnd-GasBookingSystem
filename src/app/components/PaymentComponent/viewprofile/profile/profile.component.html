@@ -1,7 +1,7 @@
 
     <div class="customer-info">
         <div class="customer-details">
-            <div class="customer-label">Name:  {{customer.id}} </div>
+            <div class="customer-label">User ID:  {{customer.id}} </div>
         </div><br>
         <div class="customer-details">
             <div class="customer-label">Email: {{customer.email}} </div>
@@ -19,13 +19,13 @@
             <div class="customer-label">Street:{{customer.address?.streetName}}</div>
         </div><br>
         <div class="customer-details">
-            <div class="customer-label">City: {{customer.address?.City}}</div>
+            <div class="customer-label">City: {{customer.address?.city}}</div>
         </div><br>
         <div class="customer-details">
             <div class="customer-label">Pincode: {{customer.address?.pinCode}} </div>
         </div><br>
         <div class="customer-details">
-            <div class="customer-label">Delivery address: {{customer.address?.doorNo}}{{","}}{{customer.address?.streetName}}{{","}}{{customer.address?.City}}{{","}}{{customer.address?.pinCode}} </div>
+            <div class="customer-label">Delivery address: {{customer.address?.doorNo}}{{","}}{{customer.address?.streetName}}{{","}}{{customer.address?.city}}{{","}}{{customer.address?.pinCode}} </div>
         </div><br>
     </div>
 

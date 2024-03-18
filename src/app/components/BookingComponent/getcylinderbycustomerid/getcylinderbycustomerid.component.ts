@@ -87,8 +87,11 @@ export class GetcylinderbycustomeridComponent {
               this.router.navigateByUrl("customer/home");
             }
           },
-          error:(error)=>{
-            console.log(error);
+          error:(err)=>{
+            console.log(err.error);
+            alert(err.error);
+            this.router.navigateByUrl("customer/home");
+
           },
           complete:()=>{
             console.log("Completed data loading");

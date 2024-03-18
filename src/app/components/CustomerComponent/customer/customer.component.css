@@ -3,7 +3,7 @@
     padding: 5px;    
     
  } */
- .register{
+ /* .register{
     background: -webkit-linear-gradient(left, #3931af, #00c6ff);
     margin-top: 3%;
     padding: 3%;
@@ -94,3 +94,125 @@
     margin-bottom: -15%;
     color: #495057;
 }
+.success_popup{
+    width: 400px;
+    background: #fff;
+    border-radius: 6px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)scale(0.1);
+    text-align: center;
+    padding: 0 30px 30px;
+    color: #333;
+    visibility: hidden;
+    transition: transform 0.4s, top 0.4s;
+}
+/* .success_popup img{
+    width: 100px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+} */
+/* .openSuccess{
+    visibility: visible;
+    top: 50%;
+    transform: translate(-50%, -50%)scale(1);
+
+}
+.success_popup h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin: 30px 0 10px;
+}
+.success_popup button{
+    width: 100%;
+    margin-top: 50px;
+    padding: 10px 0;
+    background: #6fd649;
+    color: #fff;
+    border: 0;
+    outline: none;
+    font-size: 18px;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+button:hover{
+    background-color: #C68484;
+}
+button{
+    background-color: #9B4444;
+}  */
+
+
+@import url('https://fonts.googleapis.com/css?family=PT+Sans');
+
+body{
+  background: #fff;
+  font-family: 'PT Sans', sans-serif;
+  align-content: flex-end;
+}
+h2{
+  padding-top: 1.5rem;
+}
+a{
+  color: #333;
+}
+a:hover{
+  color: #579dda;
+  text-decoration: none;
+}
+.card{
+  border: 0.20rem solid #f8f9fa;
+  top: 10%;
+
+}
+.container{
+    height: 1100px;
+    position: relative;
+    margin: 30%;
+    position: absolute;
+    top: 40%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.form-control{
+  background-color: #f8f9fa;
+  padding: 20px;
+  padding: 25px 15px;
+  margin-bottom: 1.3rem;
+}
+.alert {
+    display: none; /* Initially hide the alert */
+}
+
+.form-control:focus {
+
+    /* color: #000000; */
+    background-color: #ffffff;
+    border: 3px solid #579dda;
+    outline: 0;
+    box-shadow: none;
+
+}
+
+.btn{
+  padding: 0.6rem 1.2rem;
+  background: #da5767;
+  border: 2px solid #da5767;
+}
+.btn-primary:hover { 
+    background-color: #df8c96;
+    border-color: #df8c96;
+    transition: .3s;
+
+}
+.btn[disabled] {
+    background-color: #da5767;
+    cursor: not-allowed;
+}
+
+
+

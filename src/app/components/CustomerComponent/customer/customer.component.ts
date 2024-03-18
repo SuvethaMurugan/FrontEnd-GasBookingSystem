@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import { Address } from '../../../model/CustomerModel/Address';
 import { RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
+import { MatDialog } from  '@angular/material/dialog';
 @Component({
   selector: 'app-customer',
   standalone: true,
@@ -14,9 +15,11 @@ import { RouterLink } from '@angular/router';
   styleUrl: './customer.component.css'
 })
 export class CustomerComponent {
+  title = 'FrontEnd-GasBookingSystem';
+  alert:boolean=false
   registercustomer: RegisterCustomer = new RegisterCustomer;
   address:Address= new Address();
-
+  //constructor(private  dialogRef : MatDialog){}
   constructor(private customerservice:CustomerService){}
   registerProduct(){
     this.registercustomer.address = this.address;
@@ -34,6 +37,12 @@ export class CustomerComponent {
       }
     }
     )
+    this.alert=true
+    
+  }
+
+  closePopup(){
+    this.alert=false
   }
 }
 

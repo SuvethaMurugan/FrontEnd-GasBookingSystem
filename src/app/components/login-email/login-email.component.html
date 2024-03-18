@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<body>
+    <div class="container">
+        <form>
+            <label for="usrname">ADMIN EMAILID</label>
+            <input type="text" id="usrname" name="usrname" [(ngModel)]="loginModel.adminEmail"
+            #emailRef="ngModel" required>
+            <div *ngIf="emailRef.invalid && (emailRef.touched || emailRef.dirty)">
+                <p *ngIf="emailRef.errors?.['required']" class="refErrors" style=color:#e51313>*EmailId is required</p>
+            </div>
+            <label for="psw">PASSWORD</label>
+            <input type="password" id="psw" name="psw" [(ngModel)]="loginModel.password"
+            #pwdRef="ngModel" required>
+            <div *ngIf="pwdRef.invalid && (pwdRef.touched || pwdRef.dirty)">
+                <p *ngIf="pwdRef.errors?.['required']" class="refErrors" style="color:#e51313">*password is required</p>
+            </div>
+
+
+            <button type="submit" class="buttonclass" (click)="adminFunctions()">Submit</button>
+        </form>
+    </div>
+</body>

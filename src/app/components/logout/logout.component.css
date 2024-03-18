@@ -1,0 +1,16 @@
+.buttonclass{
+    margin-top: 4%;
+    margin-left: 30%;
+    width:30%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: #C68484;
+    color: white
+}
+.container{
+    font-size: 20px;
+    margin-top: 3%;
+    margin-left: 29%;   
+}

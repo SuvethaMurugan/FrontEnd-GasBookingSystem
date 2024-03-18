@@ -1,0 +1,10 @@
+.buttonclass{
+    width:30%;
+    padding: 5px;
+    margin-left: 25px;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-sizing: border-box;
+    background-color: #C68484;
+    color: white
+}

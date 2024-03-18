@@ -1,6 +1,6 @@
 <div class="container">
-    <h3>DISPLAY ALL PRODUCTS </h3>
-    <h6 *ngIf="getcylinderbycustomerid.length < 1">No products to display</h6>
+    <h3>DISPLAY BOOKED CYLINDER </h3>
+    <h6 *ngIf="getcylinderbycustomerid.length < 1">No cylinders are booked</h6>
     <table  class="table table-bordered" *ngIf="getcylinderbycustomerid.length > 0">
       <thead>
       <tr>
@@ -16,7 +16,7 @@
         <td>{{cylinder1.cylinderid}}</td>
         <td>{{cylinder1.status}}</td>
         <td>{{cylinder1.cylinderType}}</td>
-        <td><button class="button button-danger" (click)="PaymentCylinder(cylinder1.id)">Pay</button></td>
+        <td><button class="buttonclass" (click)="PaymentCylinder(cylinder1.id)">Pay</button></td>
     </tbody>
     </table>
 </div> 

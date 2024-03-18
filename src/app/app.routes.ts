@@ -12,6 +12,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginIdComponent } from './components/login-id/login-id.component';
 import { LoginEmailComponent } from './components/login-email/login-email.component';
 import { AdminFunctionsComponent } from './components/admin-functions/admin-functions.component';
+import { TransactionComponent } from './components/PaymentComponent/transaction/transaction.component';
+
 export const routes: Routes = [
     {path:'register',component:CustomerComponent},
     {path:'login',component:LoginComponentComponent},
@@ -26,4 +28,6 @@ export const routes: Routes = [
     {path:'loginUsingEmailId',component:LoginEmailComponent},
     {path:'adminFunctions',component:AdminFunctionsComponent},
     {path:'',component:HomeComponent}
+    {path:'transaction',component:TransactionComponent}
+
 ];

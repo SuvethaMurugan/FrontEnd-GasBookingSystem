@@ -4,7 +4,7 @@ import { RegisterCustomer } from '../../../model/CustomerModel/RegisterCustomer'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Address } from '../../../model/CustomerModel/Address';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-customer',
@@ -18,7 +18,7 @@ export class CustomerComponent {
   registercustomer: RegisterCustomer = new RegisterCustomer;
   address:Address= new Address();
 
-  constructor(private customerservice:CustomerService){}
+  constructor(private customerservice:CustomerService,private router:Router){}
   registerProduct(){
     this.registercustomer.address = this.address;
     console.log(this.registercustomer);
@@ -26,9 +26,13 @@ export class CustomerComponent {
       {
       next:(data)=>{
         console.log(data);
+        alert("Redirecting to login page");
+        this.router.navigateByUrl("login");
       },
-      error:(error)=>{
-        console.log(error);
+      error:(err)=>{
+        console.log(err);
+        alert(err.error);
+
       },
       complete:()=>{
         console.log("Completed successfully");

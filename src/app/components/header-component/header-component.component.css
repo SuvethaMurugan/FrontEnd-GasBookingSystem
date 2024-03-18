@@ -1,4 +1,4 @@
-*{
+/* *{
     border: 0;
     padding: 0;
     margin: 0;
@@ -45,5 +45,57 @@
   nav ul li:hover::after {
     top: 50%;
     opacity: 1;
+  } */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family:Arial, sans-serif;
+  }
+  
+  header {
+    background: #9B4444;
+    height: 12vh;
+    width: 100%;
+  }
+  
+  label.logo {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 100px;
+    color: white;
+    margin: 0 30px;
+  }
+  
+  header ul {
+    float: right;
+    margin-right: 30px;
+  }
+  
+  header ul li {
+    list-style: none;
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 100px;
+  }
+  
+  header ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: uppercase;
+    padding: 5px 15px;
+    border-radius: 5px;
+  }
+  
+  header ul li a.active {
+    background-color: bisque;
+    color: white;
+  }
+  header ul li a:hover {
+    background-color:  #C68484;
+    color: white;
   }
   

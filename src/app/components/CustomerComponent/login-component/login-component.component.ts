@@ -38,8 +38,7 @@ export class LoginComponentComponent {
         },
         error:(err)=>{
           this.errormessage=err.error;
-          console.log(this.errormessage);
-          this.router.navigateByUrl('login');
+          alert(err.error);
         },
         complete:()=>{
           console.log("Completed successfully");

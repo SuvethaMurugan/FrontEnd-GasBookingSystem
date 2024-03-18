@@ -7,6 +7,11 @@ import { BankLinkingComponent } from './components/PaymentComponent/bank-linking
 import { CustomerhomeComponent } from './components/customerhome/customerhome.component';
 import { ProfileComponent } from './components/PaymentComponent/viewprofile/profile/profile.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { HomeComponent } from './components/home/home.component';
+import { LoginIdComponent } from './components/login-id/login-id.component';
+import { LoginEmailComponent } from './components/login-email/login-email.component';
+import { AdminFunctionsComponent } from './components/admin-functions/admin-functions.component';
 export const routes: Routes = [
     {path:'register',component:CustomerComponent},
     {path:'login',component:LoginComponentComponent},
@@ -15,5 +20,10 @@ export const routes: Routes = [
     {path:'bank',component:BankLinkingComponent},
     {path:'customer/home', component:CustomerhomeComponent},
     {path:'logout', component:LogoutComponent},
-    {path:'profile',component:ProfileComponent}
+    {path:'profile',component:ProfileComponent},
+    {path:'admin',component:AdminComponent},
+    {path:'loginUsingId',component:LoginIdComponent},
+    {path:'loginUsingEmailId',component:LoginEmailComponent},
+    {path:'adminFunctions',component:AdminFunctionsComponent},
+    {path:'',component:HomeComponent}
 ];

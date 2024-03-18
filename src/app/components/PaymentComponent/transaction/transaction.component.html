@@ -1,0 +1,26 @@
+
+<div class="container">
+  <h3>TRANSACTION HISTORY</h3>
+    <h6 *ngIf="transaction.length<0">No products to display</h6>
+    <table  class="table table-bordered" *ngIf="transaction.length > 0">
+        <thead>
+        <tr>
+          <th>PAYMENT ID</th>
+          <th>PAYMENT TYPE</th>
+          <th>PAYMENT STATUS</th>
+          <th>PAYMENT DATE</th>
+          <th>PAYMENT AMOUNT</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let transac of transaction">
+          <td>{{transac.paymentId}}</td>
+          <td>{{transac.paymentType}}</td>
+          <td>{{transac.paymentStatus}}</td>
+          <td>{{transac.paymentDate}}</td>
+          <td>{{transac.paymentAmount}}</td>
+         
+        </tr>
+      </tbody>
+      </table>
+</div>

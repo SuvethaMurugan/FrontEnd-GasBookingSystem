@@ -16,5 +16,7 @@ export class AddPaymentService {
     console.log(id);
     return this.httpclient.get("http://localhost:8090/profile/"+id);
   }
-  
+  public getTransactionHistory(id?:number |null):Observable<any>{
+    return this.httpclient.get("http://localhost:8090/transaction/"+id);
+  }
 }

@@ -7,6 +7,7 @@ import { BankLinkingComponent } from './components/PaymentComponent/bank-linking
 import { CustomerhomeComponent } from './components/customerhome/customerhome.component';
 import { ProfileComponent } from './components/PaymentComponent/viewprofile/profile/profile.component';
 import { LogoutComponent } from './components/logout/logout.component';
+import { TransactionComponent } from './components/PaymentComponent/transaction/transaction.component';
 export const routes: Routes = [
     {path:'register',component:CustomerComponent},
     {path:'login',component:LoginComponentComponent},
@@ -15,5 +16,6 @@ export const routes: Routes = [
     {path:'bank',component:BankLinkingComponent},
     {path:'customer/home', component:CustomerhomeComponent},
     {path:'logout', component:LogoutComponent},
-    {path:'profile',component:ProfileComponent}
+    {path:'profile',component:ProfileComponent},
+    {path:'transaction',component:TransactionComponent}
 ];

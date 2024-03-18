@@ -5,11 +5,15 @@ import { RouterLink } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HeaderComponentComponent } from './components/header-component/header-component.component';
-import { MatDialogModule } from '@angular/material/dialog';
+import { FooterComponent } from './components/footer/footer.component';
+import { HomeComponent } from "./components/home/home.component";
+
+
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,CustomerComponent,RouterLink,FormsModule,CommonModule,HeaderComponentComponent,MatDialogModule],
+  imports: [RouterOutlet,CustomerComponent,RouterLink,FormsModule,CommonModule,HeaderComponentComponent,FooterComponent, HomeComponent],
+
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

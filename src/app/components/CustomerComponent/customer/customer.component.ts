@@ -4,7 +4,7 @@ import { RegisterCustomer } from '../../../model/CustomerModel/RegisterCustomer'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Address } from '../../../model/CustomerModel/Address';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 import { MatDialog } from  '@angular/material/dialog';
 @Component({
@@ -15,12 +15,14 @@ import { MatDialog } from  '@angular/material/dialog';
   styleUrl: './customer.component.css'
 })
 export class CustomerComponent {
+
+
   title = 'FrontEnd-GasBookingSystem';
-  alert:boolean=false
-  registercustomer: RegisterCustomer = new RegisterCustomer;
+  registercustomer: RegisterCustomer = new RegisterCustomer();
+
   address:Address= new Address();
-  //constructor(private  dialogRef : MatDialog){}
-  constructor(private customerservice:CustomerService){}
+
+  constructor(private customerservice:CustomerService,private router:Router){}
   registerProduct(){
     this.registercustomer.address = this.address;
     console.log(this.registercustomer);
@@ -28,9 +30,13 @@ export class CustomerComponent {
       {
       next:(data)=>{
         console.log(data);
+        alert("Redirecting to login page");
+        this.router.navigateByUrl("login");
       },
-      error:(error)=>{
-        console.log(error);
+      error:(err)=>{
+        console.log(err);
+        alert(err.error);
+
       },
       complete:()=>{
         console.log("Completed successfully");

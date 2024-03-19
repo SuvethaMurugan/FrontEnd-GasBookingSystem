@@ -28,6 +28,17 @@ input {
     width: 40%;
 }
 .btn-success{
-    margin-top:30%;
-    margin-left:30%;
+    margin-top:10%;
+    margin-left:35%;
+    background-color: #C68484;
+    border: 1px black;
+}
+.btn-success{
+    margin-top:10%;
+    margin-left:35%;
+    background-color: #C68484;
+    border: 1px black; 
+}
+.btn-success:hover {
+    background-color: #9b111e;
 }

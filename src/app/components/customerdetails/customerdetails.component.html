@@ -1,37 +1,29 @@
-<div class="container">
-    <br>
+<div class="adjust-group" >
     <div class="row">
-        <div class="col-md-3 offset-md-6">
-            <div class="text-center">
-                <h3>Customer List</h3>
-                <p>Content for Section 1.</p>
-                <button class="btn btn-primary" (click)="navCustomerList()">Click</button>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Customer List</h5>
+                    <a  href="customerlist" role="button" class="btn btn-primary">Customer List</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Today's Delivery</h5>
+                    <a href="deliverylist" role="button" class="btn btn-primary">Today's Delivery</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Customer Booking History</h5>
+                    <a href="bookinghistory"  role="button"class="btn btn-primary">Customer Booking History</a>
+                </div>
             </div>
         </div>
         
-        <div class="col-md-3">
-            <div class="text-center">
-                <h3>Today's Delivery</h3>
-                <p></p>
-                <button class="btn btn-secondary"(click)="navDeliveryList()">Click</button>
-            </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-3 offset-md-6">
-            <div class="text-center">
-                <h3>Customer Booking History</h3>
-                <p>Customer Booking History</p>
-                <button class="btn btn-success"(click)="navBookingHistory()">Click</button>
-            </div>
-        </div>
-        
-        <!-- <div class="col-md-3">
-            <div class="text-center">
-                <h3>Cylinder Status</h3>
-                <p>Final content for Section 4.</p>
-                <button class="btn btn-danger">Click</button>
-            </div>
-        </div> -->
-    </div>
-</div>

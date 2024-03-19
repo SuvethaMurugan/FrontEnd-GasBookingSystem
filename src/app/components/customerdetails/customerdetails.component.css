@@ -1,0 +1,46 @@
+.btn-group-vertical {
+    left:40%;
+    top:80%; 
+}
+
+
+a {
+    background-color:#C68484;
+}
+h2 {
+    color:#C68484; 
+    font-size: 30px;
+    font-weight: 300;
+}
+.card-title{
+    font-size: 20px;
+}
+
+
+.col-md-4{
+        margin-right:5%;
+        margin-top: 2%;
+        width: 300px; /* Adjust as needed */
+        padding: 30px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+.btn-primary{
+    background-color: #C68484;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+
+
+}
+.btn-primary:hover{
+    background: #9B4444;
+}   
+.adjust-group{
+    margin-left:10%;
+    margin-top:10%;
+}
+

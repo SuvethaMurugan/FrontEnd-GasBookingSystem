@@ -1,0 +1,20 @@
+<div class="container">
+    <h3>TODAY'S DELIVERY LIST</h3>
+    <h6 *ngIf="Deliverylist.length < 1">No Deliveries Today</h6>
+    <table  class="table table-bordered">
+      <thead>
+      <tr>
+        <th>BOOKING ID</th>
+        <th>BOOKING DATE</th>
+        <th>DELIVERY DATE</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of  Deliverylist">
+        <td>{{list.id}}</td>
+        <td>{{list.bookingDate}}</td>
+        <td>{{list.deliveryDate}}</td>
+    </tr>
+    </tbody>
+    </table>
+</div> 

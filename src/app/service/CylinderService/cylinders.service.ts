@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { BookcylinderModule } from '../../model/BookingModel/bookcylinder/bookcylinder.module';
 import { AddPaymentModule } from '../../model/PaymentModel/add-payment/add-payment.module';
+import { RefillModule } from '../../model/BookingModel/refill/refill.module';
 
 @Injectable({
   providedIn: 'root'
@@ -21,5 +22,8 @@ export class CylindersService {
   }
   public AddPaymentService(paymentmodule:AddPaymentModule):Observable<any>{
     return this.http.post("http://localhost:8090/book/payment",paymentmodule);
+  }
+  public refillCylinder(refill:RefillModule):Observable<any>{
+    return this.http.post("http://localhost:8090/booking/refill",refill);
   }
 }

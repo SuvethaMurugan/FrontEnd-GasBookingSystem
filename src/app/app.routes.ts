@@ -13,6 +13,7 @@ import { LoginIdComponent } from './components/login-id/login-id.component';
 import { LoginEmailComponent } from './components/login-email/login-email.component';
 import { AdminFunctionsComponent } from './components/admin-functions/admin-functions.component';
 import { TransactionComponent } from './components/PaymentComponent/transaction/transaction.component';
+import { RefillComponent } from './components/BookingComponent/refill/refill.component';
 
 export const routes: Routes = [
     {path:'register',component:CustomerComponent},
@@ -27,7 +28,7 @@ export const routes: Routes = [
     {path:'loginUsingId',component:LoginIdComponent},
     {path:'loginUsingEmailId',component:LoginEmailComponent},
     {path:'adminFunctions',component:AdminFunctionsComponent},
-    {path:'',component:HomeComponent}
+    {path:'cylinder/refill',component:RefillComponent},
     {path:'transaction',component:TransactionComponent}
 
 ];

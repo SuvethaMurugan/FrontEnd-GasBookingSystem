@@ -4,12 +4,12 @@
     height: 700px;
 }
 .container{
-    background-image: url('/../../assets/Cooking-cylinder.jpg');
-    background-size: cover;
+    background-image: url('/../../assets/cylinder-removebg-preview.png');
+    background-size:contain;
     background-repeat: no-repeat;
     width: 500px;
     height: 500px;
-    align-items: center;
+    align-items:center;
     margin: 0;
     float: left;
 }
@@ -45,9 +45,7 @@
     color:#fff;
     /* width:000px; */
     width: 400px;
-    animation-duration: 1s;
     /* margin-top:10%; */
-    animation-name: slidein;
     display: inline;
     float: left;
     font-size: 2.5em;

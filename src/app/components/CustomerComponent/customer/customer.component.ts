@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { Address } from '../../../model/CustomerModel/Address';
 import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
-import { MatDialog } from  '@angular/material/dialog';
 @Component({
   selector: 'app-customer',
   standalone: true,
@@ -43,13 +42,10 @@ export class CustomerComponent {
       }
     }
     )
-    this.alert=true
+    
     
   }
 
-  closePopup(){
-    this.alert=false
-  }
 }
 
 

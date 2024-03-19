@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BookCylinderComponent } from './book-cylinder.component';
+import { RefillComponent } from './refill.component';
 
-describe('BookCylinderComponent', () => {
-  let component: BookCylinderComponent;
-  let fixture: ComponentFixture<BookCylinderComponent>;
+describe('RefillComponent', () => {
+  let component: RefillComponent;
+  let fixture: ComponentFixture<RefillComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BookCylinderComponent]
+      imports: [RefillComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(BookCylinderComponent);
+    fixture = TestBed.createComponent(RefillComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

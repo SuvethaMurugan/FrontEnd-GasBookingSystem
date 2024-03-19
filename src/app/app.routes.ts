@@ -13,6 +13,7 @@ import { LoginIdComponent } from './components/login-id/login-id.component';
 import { LoginEmailComponent } from './components/login-email/login-email.component';
 import { AdminFunctionsComponent } from './components/admin-functions/admin-functions.component';
 import { TransactionComponent } from './components/PaymentComponent/transaction/transaction.component';
+import { RefillComponent } from './components/BookingComponent/refill/refill.component';
 
 import { CylinderFunctionsComponent } from './components/cylinder-functions/cylinder-functions.component';
 import { CustomerdetailsComponent } from './components/customerdetails/customerdetails.component';
@@ -32,12 +33,13 @@ export const routes: Routes = [
     {path:'loginUsingId',component:LoginIdComponent},
     {path:'loginUsingEmailId',component:LoginEmailComponent},
     {path:'adminFunctions',component:AdminFunctionsComponent},
+    {path:'cylinder/refill',component:RefillComponent},
+
     {path:'customerdetails',component:CustomerdetailsComponent},
     {path:'cylinderFunctions',component:CylinderFunctionsComponent},
     {path:'customerlist',component:CustomerlistComponent},
     {path:'bookinghistory',component:BookingHistoryComponent},
     {path:'deliverylist',component:DeliverylistComponent},
-    {path:'',component:HomeComponent},
     {path:'transaction',component:TransactionComponent}
 
 ];

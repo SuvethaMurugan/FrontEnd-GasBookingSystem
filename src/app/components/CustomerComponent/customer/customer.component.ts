@@ -15,9 +15,11 @@ import { RouterLink } from '@angular/router';
 })
 export class CustomerComponent {
 
-
   title = 'FrontEnd-GasBookingSystem';
   registercustomer: RegisterCustomer = new RegisterCustomer();
+
+
+  
 
   address:Address= new Address();
 
@@ -30,6 +32,7 @@ export class CustomerComponent {
       next:(data)=>{
         console.log(data);
         alert("Redirecting to login page");
+
         this.router.navigateByUrl("login");
       },
       error:(err)=>{

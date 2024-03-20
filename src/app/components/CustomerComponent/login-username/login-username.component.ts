@@ -16,7 +16,7 @@ import { Customer } from '../../../model/CustomerModel/Customer';
   templateUrl: './login-username.component.html',
   styleUrl: './login-username.component.css'
 })
-export class LoginComponentComponent {
+export class LoginComponentUserComponent {
   message:string="";
   errormessage:string="";
   account:Customer=new Customer();

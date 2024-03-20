@@ -12,9 +12,9 @@ import { Router, RouterLink } from '@angular/router';
 export class CustomerLoginOptionComponent {
   constructor(private router:Router){}
   loginUsingMobileNum(){
-   this.router.navigateByUrl('loginUsingMobileNum');
+   this.router.navigateByUrl('login/mobileno');
   }
   loginUsingUserName(){
-   this.router.navigateByUrl('loginUsingUserName');
+   this.router.navigateByUrl('login/username');
   }
 }

@@ -27,10 +27,14 @@ import { CustomerdetailsComponent } from './components/customerdetails/customerd
 import { CustomerlistComponent } from './components/customerlist/customerlist.component';
 import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
 import { DeliverylistComponent } from './components/deliverylist/deliverylist.component';
+import { CustomerLoginOptionComponent } from './components/CustomerComponent/customer-login-option/customer-login-option.component';
+import { LoginComponentUserComponent } from './components/CustomerComponent/login-username/login-username.component';
 
 export const routes: Routes = [
     {path:'register',component:CustomerComponent},
-    {path:'login',component:LoginComponentComponent},
+    {path:'login',component:CustomerLoginOptionComponent},
+    {path:'login/username',component:LoginComponentUserComponent},
+    {path:'login/mobileno',component:LoginComponentComponent},
     {path:'cylinder',component:CylindersComponent},
     {path:'booked/cylinder',component:GetcylinderbycustomeridComponent},
     {path:'bank',component:BankLinkingComponent},
@@ -42,7 +46,6 @@ export const routes: Routes = [
     {path:'cylinderFunctionality',component:CylinderFunctionalityComponent},
     {path:'AllCylinders',component:AllCylindersComponent},
     {path:'bookedCylinders',component:BookedCylindersComponent},
-
     {path:'admin',component:AdminComponent},
     {path:'loginUsingId',component:LoginIdComponent},
     {path:'loginUsingEmailId',component:LoginEmailComponent},

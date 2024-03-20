@@ -43,13 +43,13 @@ export class CustomerComponent {
       }
     }
     )
-    this.alert=true
+    // this.alert=true
     
   }
 
-  closePopup(){
-    this.alert=false
-  }
+  // closePopup(){
+  //   this.alert=false
+  // }
 }
 
 

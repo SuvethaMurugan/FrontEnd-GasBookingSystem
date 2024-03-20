@@ -27,7 +27,7 @@ export const routes: Routes = [
     {path:'loginUsingId',component:LoginIdComponent},
     {path:'loginUsingEmailId',component:LoginEmailComponent},
     {path:'adminFunctions',component:AdminFunctionsComponent},
-    {path:'',component:HomeComponent}
+    // {path:'',component:HomeComponent},
     {path:'transaction',component:TransactionComponent}
 
 ];

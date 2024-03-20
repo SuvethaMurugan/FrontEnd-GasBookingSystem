@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { DeliverylistModule } from '../../model/admin/deliverylist/deliverylist.module';
 import { DeliverylistService } from '../../service/Admin/deliverylist.service';
 import { Router } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-deliverylist',
   standalone: true,
-  imports: [],
+  imports: [FormsModule,CommonModule],
   templateUrl: './deliverylist.component.html',
   styleUrl: './deliverylist.component.css'
 })

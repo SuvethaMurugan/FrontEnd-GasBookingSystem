@@ -1,22 +1,26 @@
 <div class="container">
-    <h3>Display all Cylinders</h3>
-    <h4 *ngIf="cylinders.length<1">No Cylinders to display</h4>
+    <h2>Booked Cylinders</h2>
+    <h2 *ngIf="cylinders.length<1">No Cylinders to display</h2>
     <table class="table table-bordered"  *ngIf="cylinders.length > 0 ">
-        <tr>
-            <th>Id</th>
-            <th>CustomerId</th>
-            <th>CylinderId</th>
-            <th>Cylinder Type</th>
-            <th>BookingDate</th>
-            <th>DeliveryDate</th>
-        </tr>
-        <tr *ngFor="let cylinder of cylinders">
-            <td>{{cylinder.id}}</td>
-            <td>{{cylinder.customerid}}</td>
-            <td>{{cylinder.cylinderid}}</td>
-            <td>{{cylinder.bookingDate}}</td>
-            <td>{{cylinder.deliveryDate}}</td>
-
-        </tr>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>CylinderId</th>
+                <th>Cylinder Type</th>
+                <th>BookingDate</th>
+                <th>DeliveryDate</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let cylinder of cylinders">
+                <td>{{cylinder.id}}</td>
+                <td>{{cylinder.cylinderid}}</td>
+                <td>{{cylinder.cylinderType}}</td>
+                <td>{{cylinder.bookingDate}}</td>
+                <td>{{cylinder.deliveryDate}}</td>
+    
+            </tr>
+        </tbody>
     </table>
+    <button onclick="document.location='cylinderFunctionality'">Back</button>
 </div>

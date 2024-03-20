@@ -17,7 +17,7 @@ export class BankLinkingComponent {
   constructor(private addpaymentservice:AddPaymentService,private router:Router){}
   BankLinkingComponent(){
     var customerid=JSON.parse(localStorage.getItem("customerId")|| '{}');
-    var bankid=localStorage.setItem("bankId",JSON.stringify(1));
+    // var bankid=localStorage.setItem("bankId",JSON.stringify(1));
     console.log(customerid);
     console.log(customerid);
     this.banklinking.customerId=customerid;
@@ -25,6 +25,7 @@ export class BankLinkingComponent {
       {
       next:(data)=>{
         console.log(data);
+        localStorage.setItem("customer",JSON.stringify(data)); 
         this.message="Bank account was linked successfully";
         console.log(this.message);
           setTimeout(() => {

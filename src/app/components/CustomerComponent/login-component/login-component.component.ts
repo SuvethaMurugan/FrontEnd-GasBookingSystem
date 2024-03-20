@@ -30,7 +30,8 @@ export class LoginComponentComponent {
         next:(data)=>{
           this.account=data;
           this.accountid=this.account.id;
-          this.accountname=this.account.userName; 
+          this.accountname=this.account.userName;
+          localStorage.setItem("customer",JSON.stringify(data)); 
           localStorage.setItem("customerId",JSON.stringify(this.accountid));
           localStorage.setItem("customerName",JSON.stringify(this.accountname));
           console.log(data);

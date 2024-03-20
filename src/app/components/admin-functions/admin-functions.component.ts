@@ -25,7 +25,7 @@ export class AdminFunctionsComponent {
   }
   else {
     console.log(str2);
-    this.router.navigateByUrl('cylinderFunctions');
+    this.router.navigateByUrl('cylinderFunctionality');
   }
   }
   

@@ -25,11 +25,7 @@ h2 {
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     
 }
-.col-md-4:hover {
-    background: #C68484;
-    
-}
-.card-body a:hover{
-    background: #C68484;
-}
+.btn-primary:hover{
+    background: #9B4444;
 
+}

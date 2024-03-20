@@ -1,5 +1,5 @@
 <div class="container">
-    <h3>Add Cylinder Details</h3>
+    <h2>Add Cylinder Details</h2>
     <form>
         <div class="form-group row">
             <label class="col-sm-2 col-form-label" >Select Type</label>
@@ -19,7 +19,7 @@
         <div class="col-sm-10">
         <input type="text"  id="weight" name="weight" [(ngModel)]="cylinder.weight">
     </div></div>
-    <button class="btn btn-sez"(click)="addCylinder()">Add</button>
+    <button type="submit" class="buttonclass" (click)="addCylinder()">Add</button>
     </form>
 </div>
 <router-outlet></router-outlet>

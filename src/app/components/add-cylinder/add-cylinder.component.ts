@@ -25,6 +25,7 @@ export class AddCylinderComponent {
       next:(data)=>{
         console.log(data);
         alert("Cylinder Added Successsfully");
+        this.router.navigateByUrl('cylinderFunctionality')
       },
       error:(err)=>{
         console.log(err);

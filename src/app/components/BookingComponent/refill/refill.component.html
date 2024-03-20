@@ -1,0 +1,29 @@
+
+  <div class="container">
+      <h3>DISPLAY BOOKED CYLINDER </h3>
+      <h6 *ngIf="getcylinderbycustomerid.length < 1">No cylinders are booked</h6>
+      <table  class="table table-bordered" *ngIf="getcylinderbycustomerid.length > 0">
+        <thead>
+        <tr>
+          <th>BOOKING ID</th>
+          <th>CYLINDER ID</th>
+          <th>STATUS</th>
+          <th>CYLINDER TYPE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let cylinder1 of getcylinderbycustomerid">
+          <td>{{cylinder1.id}}</td>
+          <td>{{cylinder1.cylinderid}}</td>
+          <td>{{cylinder1.status}}</td>
+          <td>{{cylinder1.cylinderType}}</td>
+          <td><button class="buttonclass" (click)="RefillCylinder(cylinder1.id,cylinder1.cylinderid)">Refill</button></td>
+      </tbody>
+      </table>
+  </div> 
+  
+  
+<router-outlet></router-outlet>
+  
+  
+  

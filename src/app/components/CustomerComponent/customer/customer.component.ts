@@ -14,9 +14,13 @@ import { RouterLink } from '@angular/router';
   styleUrl: './customer.component.css'
 })
 export class CustomerComponent {
+
   title = 'FrontEnd-GasBookingSystem';
-  //registercustomer:RegisterCustomer=new RegisterCustomer();
   registercustomer: RegisterCustomer = new RegisterCustomer();
+
+
+  
+
   address:Address= new Address();
 
   constructor(private customerservice:CustomerService,private router:Router){}
@@ -28,17 +32,23 @@ export class CustomerComponent {
       next:(data)=>{
         console.log(data);
         alert("Redirecting to login page");
-        this.router.navigateByUrl('login-component');
+
+        this.router.navigateByUrl("login");
       },
-      error:(error)=>{
-        console.log(error);
+      error:(err)=>{
+        console.log(err);
+        alert(err.error);
+
       },
       complete:()=>{
         console.log("Completed successfully");
       }
     }
     )
+    
+    
   }
+
 }
 
 

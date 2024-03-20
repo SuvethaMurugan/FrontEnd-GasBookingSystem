@@ -19,7 +19,6 @@ export class GetcylinderbycustomeridComponent {
     paymentcylinder:AddPaymentModule=new AddPaymentModule();
     customerid:string="";
     constructor(private cylinderservice:CylindersService,private router:Router){
-     
       this.getAllCylindersById();
     }
     getAllCylindersById(){
@@ -42,6 +41,8 @@ export class GetcylinderbycustomeridComponent {
     }
     message:string="";
     errormessage1:string="";
+    message1:string="";
+    errormessage2:string="";
     bankmessage1:string="";
     bankmessage:boolean=false;
     password:string="";
@@ -82,13 +83,21 @@ export class GetcylinderbycustomeridComponent {
         {
           next:(data)=>{
             console.log(data);
-            let condition=window.confirm("Paid successfully");
-            if(condition){
-              this.router.navigateByUrl("customer/home");
-            }
+              console.log(data);
+              this.message1="Payment for the cylinder is successful";
+              console.log(this.message);
+              setTimeout(() => {
+                this.router.navigate(['customer/home']);
+              }, 1000);
           },
-          error:(error)=>{
-            console.log(error);
+          error:(err)=>{
+            console.log(err.error);
+            this.errormessage2=err.error;
+            console.log(this.message);
+            setTimeout(() => {
+              this.router.navigate(['customer/home']);
+            }, 1000);
+
           },
           complete:()=>{
             console.log("Completed data loading");

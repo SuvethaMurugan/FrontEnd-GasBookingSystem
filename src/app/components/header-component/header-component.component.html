@@ -1,13 +1,22 @@
-<div class="container">
+<!-- <div class="container">
     <nav>
         <ul>
             <li routerLink ="/register">Register</li>
             <li routerLink ="/login">Login</li>
             <li routerLink ="/logout">logout</li>
-            <li>Clients</li>
-            <li>Contact</li>
         </ul>
     </nav>
 <router-outlet></router-outlet>
-</div>
+</div> -->
+
+<header class="header">
+    <label class="logo">BookITEasy</label>
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="/register">Register</a></li>
+      <li><a href ="/login">Login</a></li>
+      <li><a href="/admin">Admin</a></li>
+    </ul>
+    <router-outlet></router-outlet>
+</header>
 

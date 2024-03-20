@@ -1,0 +1,25 @@
+<!-- <div class="container">
+    <form class="adminform">
+    <label for="Select" style="padding-left: 200px;">Select </label>
+    
+    <select name="admin" id="admin" [(ngModel)]="string1">
+        <option value="Customer">Customer</option>
+        <option value="Cylinder">Cylinder</option>
+    </select>
+    <button type="button" class="btn btn-success" (click)="adminfunc()">Submit</button>
+    </form>
+</div> -->
+<div class="container mt-5">
+    <form>
+        <div class="mb-3" style="padding-left: 150px;">
+            <label for="customSelect" class="form-label">Select an option:</label>
+            <div class="custom-dropdown">
+                <select name="admin" id="admin" [(ngModel)]="string1">
+                    <option value="customer">Customer</option>
+                    <option value="cylinder">Cylinder</option>
+                </select>
+            </div>
+        </div>
+        <button type="button" class="btn btn-success" (click)="adminfunc()">Submit</button>
+    </form>
+</div>

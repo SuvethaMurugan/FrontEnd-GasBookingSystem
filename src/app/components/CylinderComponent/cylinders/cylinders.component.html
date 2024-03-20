@@ -1,3 +1,6 @@
+<div *ngIf="message" class="alert alert-success" role="alert">
+  <p> {{message}}</p>
+</div>
 <div class="container">
     <h3>DISPLAY AVAILABLE CYLINDER </h3>
     <h6 *ngIf="cylinders.length < 1">No cylinders are available</h6>
@@ -22,3 +25,4 @@
     </tbody>
     </table>
 </div> 
+

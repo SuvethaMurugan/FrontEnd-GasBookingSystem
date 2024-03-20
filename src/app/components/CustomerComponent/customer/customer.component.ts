@@ -4,7 +4,7 @@ import { RegisterCustomer } from '../../../model/CustomerModel/RegisterCustomer'
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { Address } from '../../../model/CustomerModel/Address';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
 @Component({
   selector: 'app-customer',
@@ -14,17 +14,12 @@ import { RouterLink } from '@angular/router';
   styleUrl: './customer.component.css'
 })
 export class CustomerComponent {
-<<<<<<< HEAD
   title = 'FrontEnd-GasBookingSystem';
-  registercustomer: any;
   //registercustomer:RegisterCustomer=new RegisterCustomer();
-=======
-
-  registercustomer: RegisterCustomer = new RegisterCustomer;
->>>>>>> 7bf9a377b10fe2da69544c0445fd350f8dd3e22f
+  registercustomer: RegisterCustomer = new RegisterCustomer();
   address:Address= new Address();
 
-  constructor(private customerservice:CustomerService){}
+  constructor(private customerservice:CustomerService,private router:Router){}
   registerProduct(){
     this.registercustomer.address = this.address;
     console.log(this.registercustomer);
@@ -32,6 +27,8 @@ export class CustomerComponent {
       {
       next:(data)=>{
         console.log(data);
+        alert("Redirecting to login page");
+        this.router.navigateByUrl('login-component');
       },
       error:(error)=>{
         console.log(error);

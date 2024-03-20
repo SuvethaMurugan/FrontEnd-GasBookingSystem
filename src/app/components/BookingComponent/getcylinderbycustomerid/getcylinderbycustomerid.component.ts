@@ -62,7 +62,10 @@ export class GetcylinderbycustomeridComponent {
     }
     getPassword(){
       console.log(this.bankmessage);
-      if(localStorage.getItem("bankId")==null){
+      var customer =JSON.parse(localStorage.getItem("customer")|| "{}");
+      console.log(customer);
+      console.log(customer.bank);
+      if(customer.bank==null ){
         console.log(localStorage.getItem("bankId"));
         let condition= window.confirm("Bank account is not linked to the account");
         if(condition){

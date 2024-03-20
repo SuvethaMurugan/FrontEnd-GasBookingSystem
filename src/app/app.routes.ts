@@ -22,7 +22,7 @@ import { BookedCylindersComponent } from './components/booked-cylinders/booked-c
 
 import { RefillComponent } from './components/BookingComponent/refill/refill.component';
 
-import { CylinderFunctionsComponent } from './components/cylinder-functions/cylinder-functions.component';
+
 import { CustomerdetailsComponent } from './components/customerdetails/customerdetails.component';
 import { CustomerlistComponent } from './components/customerlist/customerlist.component';
 import { BookingHistoryComponent } from './components/booking-history/booking-history.component';
@@ -41,7 +41,7 @@ export const routes: Routes = [
     {path:'addCylinder',component:AddCylinderComponent},
     {path:'cylinderFunctionality',component:CylinderFunctionalityComponent},
     {path:'AllCylinders',component:AllCylindersComponent},
-    {path:'bookedCylinders',component:BookedCylindersComponent}
+    {path:'bookedCylinders',component:BookedCylindersComponent},
 
     {path:'admin',component:AdminComponent},
     {path:'loginUsingId',component:LoginIdComponent},
@@ -50,7 +50,6 @@ export const routes: Routes = [
     {path:'cylinder/refill',component:RefillComponent},
 
     {path:'customerdetails',component:CustomerdetailsComponent},
-    {path:'cylinderFunctions',component:CylinderFunctionsComponent},
     {path:'customerlist',component:CustomerlistComponent},
     {path:'bookinghistory',component:BookingHistoryComponent},
     {path:'deliverylist',component:DeliverylistComponent},

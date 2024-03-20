@@ -45,10 +45,7 @@ export class CustomerComponent {
       }
     }
     )
-    
-    
   }
-
 }
 
 

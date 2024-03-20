@@ -41,7 +41,7 @@ export const routes: Routes = [
     {path:'addCylinder',component:AddCylinderComponent},
     {path:'cylinderFunctionality',component:CylinderFunctionalityComponent},
     {path:'AllCylinders',component:AllCylindersComponent},
-    {path:'bookedCylinders',component:BookedCylindersComponent}
+    {path:'bookedCylinders',component:BookedCylindersComponent},
 
     {path:'admin',component:AdminComponent},
     {path:'loginUsingId',component:LoginIdComponent},

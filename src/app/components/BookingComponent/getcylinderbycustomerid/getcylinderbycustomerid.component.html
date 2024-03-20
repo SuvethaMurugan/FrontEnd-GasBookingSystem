@@ -1,11 +1,25 @@
+<div *ngIf="message1" class="alert alert-success" role="alert">
+  <p> {{message1}}</p>
+</div>
+<div *ngIf="errormessage2" class="alert alert-danger" role="alert">
+  <p> {{errormessage2}}</p>
+</div>
+<div *ngIf="ispassword">
+  <div class="passwordcheck">
+    <label for="psw">PASSWORD</label>
+    <input type="password" id="psw" name="psw" [(ngModel)]="password">
+    <br>
+    <button type="submit" class="btn btn-primary" (click)="getPasswordCheck()">Submit</button>
+</div>
+</div>
 <div class="container">
     <h3>DISPLAY BOOKED CYLINDER </h3>
     <h6 *ngIf="getcylinderbycustomerid.length < 1">No cylinders are booked</h6>
     <table  class="table table-bordered" *ngIf="getcylinderbycustomerid.length > 0">
       <thead>
       <tr>
-        <th>CYLINDER ID</th>
         <th>BOOKING ID</th>
+        <th>CYLINDER ID</th>
         <th>STATUS</th>
         <th>CYLINDER TYPE</th>
       </tr>
@@ -24,11 +38,7 @@
   <p> {{errormessage1}}</p>
 </div>
 
-<div *ngIf="ispassword">
-  Password:
-  <input type="text"  id="city" name="city" [(ngModel)]="password">
-  <button type="submit" class="btn btn-primary mb-2" (click)="getPasswordCheck()">Submit</button>
-</div>
+
 <router-outlet></router-outlet>
 
 

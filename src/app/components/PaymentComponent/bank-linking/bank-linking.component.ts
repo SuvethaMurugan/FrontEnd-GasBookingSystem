@@ -12,6 +12,7 @@ import { Router } from '@angular/router';
   styleUrl: './bank-linking.component.css'
 })
 export class BankLinkingComponent {
+  message:string="";
   banklinking:BankLinkingModelModule=new BankLinkingModelModule();
   constructor(private addpaymentservice:AddPaymentService,private router:Router){}
   BankLinkingComponent(){
@@ -24,7 +25,11 @@ export class BankLinkingComponent {
       {
       next:(data)=>{
         console.log(data);
-        this.router.navigateByUrl("customer/home");
+        this.message="Bank account was linked successfully";
+        console.log(this.message);
+          setTimeout(() => {
+            this.router.navigate(['customer/home']);
+          }, 1000);
       },
       error:(error)=>{
         console.log(error);

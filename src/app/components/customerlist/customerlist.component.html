@@ -1,0 +1,28 @@
+<div class="container">
+    <h3>CUSTOMER LIST</h3>
+  
+    <table  class="table table-bordered">
+      <thead>
+      <tr>
+        <th>CUSTOMER ID</th>
+        <th>USERNAME</th>
+        <th>EMAIL</th>
+        <th>MOBILE NUMBER</th>
+        <th>ACTIVE STATUS</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let customer of customerlist">
+        <td>{{customer.id}}</td>
+        <td>{{customer.userName}}</td>
+        <td>{{customer.email}}</td>
+        <td>{{customer.mobileNo}}</td>
+        <td>{{customer.isActive}}</td>
+    </tr>
+    </tbody>
+    </table>
+    <h3 *ngIf="customerlist.length < 1">No Customers</h3>
+</div> 
+<!-- <div *ngIf="errormessage1.length<0" class="alert alert-danger">
+  <p> {{errormessage1}}</p>
+</div> -->

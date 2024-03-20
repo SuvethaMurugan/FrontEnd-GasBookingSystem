@@ -13,7 +13,8 @@ import { Router } from '@angular/router';
   styleUrl: './cylinders.component.css'
 })
 export class CylindersComponent {
-
+    message:string="";
+    errormessage:string="";
   cylinders:CylindersModule[]=[];
   constructor(private cylinderservice:CylindersService,private router:Router){
     this.getAllCylinders();
@@ -50,7 +51,12 @@ export class CylindersComponent {
       {
         next:(data)=>{
           console.log(data);
-          this.router.navigateByUrl('/booked/cylinder');  
+          this.message="The cylinder was booked successfully";
+          console.log(this.message);
+          setTimeout(() => {
+            this.router.navigate(['/booked/cylinder']);
+          }, 1000);
+          // if(this.message) this.router.navigateByUrl('/booked/cylinder');  
           
         },
         error:(error)=>{

@@ -1,0 +1,22 @@
+<div class="container">
+    <h3>Display all Cylinders</h3>
+    <h4 *ngIf="cylinders.length<1">No Cylinders to display</h4>
+    <table class="table table-bordered"  *ngIf="cylinders.length > 0 ">
+        <tr>
+            <th>Id</th>
+            <th>CustomerId</th>
+            <th>CylinderId</th>
+            <th>Cylinder Type</th>
+            <th>BookingDate</th>
+            <th>DeliveryDate</th>
+        </tr>
+        <tr *ngFor="let cylinder of cylinders">
+            <td>{{cylinder.id}}</td>
+            <td>{{cylinder.customerid}}</td>
+            <td>{{cylinder.cylinderid}}</td>
+            <td>{{cylinder.bookingDate}}</td>
+            <td>{{cylinder.deliveryDate}}</td>
+
+        </tr>
+    </table>
+</div>

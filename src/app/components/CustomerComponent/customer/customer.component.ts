@@ -6,7 +6,6 @@ import { CommonModule } from '@angular/common';
 import { Address } from '../../../model/CustomerModel/Address';
 import { Router, RouterOutlet } from '@angular/router';
 import { RouterLink } from '@angular/router';
-import { MatDialog } from  '@angular/material/dialog';
 @Component({
   selector: 'app-customer',
   standalone: true,
@@ -16,9 +15,11 @@ import { MatDialog } from  '@angular/material/dialog';
 })
 export class CustomerComponent {
 
-
   title = 'FrontEnd-GasBookingSystem';
   registercustomer: RegisterCustomer = new RegisterCustomer();
+
+
+  
 
   address:Address= new Address();
 
@@ -31,6 +32,7 @@ export class CustomerComponent {
       next:(data)=>{
         console.log(data);
         alert("Redirecting to login page");
+
         this.router.navigateByUrl("login");
       },
       error:(err)=>{
@@ -43,13 +45,7 @@ export class CustomerComponent {
       }
     }
     )
-    // this.alert=true
-    
   }
-
-  // closePopup(){
-  //   this.alert=false
-  // }
 }
 
 

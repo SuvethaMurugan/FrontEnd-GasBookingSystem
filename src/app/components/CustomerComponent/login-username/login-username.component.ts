@@ -7,6 +7,7 @@ import { CommonModule } from '@angular/common';
 import { DOCUMENT } from '@angular/common';
 import { CustomerService } from '../../../service/CustomerService/customer.service';
 import { Customer } from '../../../model/CustomerModel/Customer';
+import { CustomerLoginUsername } from '../../../model/CustomerModel/CustomerLoginUsername';
 
 
 @Component({
@@ -20,12 +21,16 @@ export class LoginComponentUserComponent {
   message:string="";
   errormessage:string="";
   account:Customer=new Customer();
-  logincustomer:LoginCustomer=new LoginCustomer();
+  logincustomer:CustomerLoginUsername=new CustomerLoginUsername();
+  // loginnamecustomer:LoginCustomer=new LoginCustomer();
   accountid?:number;
   accountname?:string;
   constructor(private customerservice:CustomerService,private router:Router,@Inject(DOCUMENT) private document: Document){}
+  
   loginComponent(){
-    this.customerservice.loginCustomer(this.logincustomer).subscribe(
+    console.log(this.logincustomer.password);
+    console.log(this.logincustomer.userName);
+    this.customerservice.loginNameCustomer(this.logincustomer).subscribe(
       {
         next:(data)=>{
           this.account=data;

@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { RegisterCustomer } from '../../model/CustomerModel/RegisterCustomer';
 import { Observable } from 'rxjs';
 import { LoginCustomer } from '../../model/CustomerModel/LoginCustomer';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -15,5 +16,7 @@ export class CustomerService {
   public loginCustomer(logincustomer:LoginCustomer):Observable<any>{
     return this.Http.post("http://localhost:8090/login/mobilenum",logincustomer);
   }
-  
+  public loginNameCustomer(logincustomer:LoginCustomer):Observable<any>{
+    return this.Http.post("http://localhost:8090/login/userName",logincustomer);
+  }
 }
